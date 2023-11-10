@@ -6,6 +6,15 @@
     <p class="mb-4 text-sm text-slate-500">
       {{ subtitle }}
     </p>
+    <VBtnDev
+      v-if="isDevEnv"
+      class="mb-6"
+      @click="
+        credentials = { email: 'devel@rmorgado.ch', password: '123456789' }
+      "
+    >
+      FakeData
+    </VBtnDev>
     <v-form
       v-model="isFormValid"
       class="flex w-full flex-col items-start"
@@ -98,12 +107,12 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from 'vue'
 import FieldPassword from '@/components/fields/FieldPassword.vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import validationRules from '@/utils/validations/rules'
 import { toast } from 'vue-sonner'
+import { isDevEnv } from '@/utils'
 
 const props = defineProps<{
   signUp: boolean

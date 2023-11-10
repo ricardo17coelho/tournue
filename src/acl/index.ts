@@ -3,7 +3,6 @@ import router from '@/router'
 // ----- VUE 3 Imports -----
 import { createAcl, defineAclRules } from 'vue-simple-acl'
 import { USER_ROLES } from '@/constants/roles'
-import { computed } from 'vue'
 import { useAuthStore } from '@/stores/auth'
 
 const authStore = useAuthStore()

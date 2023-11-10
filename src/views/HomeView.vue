@@ -7,7 +7,6 @@
 </template>
 <script setup lang="ts">
 import { useAuthStore } from '@/stores/auth'
-import { watch } from 'vue'
 import { useRouter } from 'vue-router'
 
 const authStore = useAuthStore()

@@ -49,7 +49,7 @@ async function onSubmit() {
     await passwordReset(email.value)
     toast.error('please follow the link in your email')
   } catch (e) {
-    toast.error((e.message)
+    toast.error(e.message)
   } finally {
     loading.value = false
   }

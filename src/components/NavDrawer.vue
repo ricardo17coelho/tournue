@@ -9,7 +9,6 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
 import { RouteLocationRaw } from 'vue-router'
 import { useAcl } from 'vue-simple-acl'
 import { isDevEnv } from '@/utils'

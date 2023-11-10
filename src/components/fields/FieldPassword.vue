@@ -11,7 +11,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
 import validationRules from '@/utils/validations/rules'
 
 defineProps({
