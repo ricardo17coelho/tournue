@@ -2363,6 +2363,11 @@ vue-simple-acl@^2.0.2:
   resolved "https://registry.yarnpkg.com/vue-simple-acl/-/vue-simple-acl-2.0.2.tgz#0c9dc04e36a15d78a14236604c1918c670742b79"
   integrity sha512-4A3pIWT1Mn6qQp84dxjlcmUYX2S2ShKcyt+gsk/1YC8J67X8EU2KWa/t8aGJLgHvb+A820Lt76erzwJ7QAL+xQ==
 
+vue-sonner@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/vue-sonner/-/vue-sonner-1.0.2.tgz#93d8a65965afeb15c167588eddb56faa88c3a66a"
+  integrity sha512-BXIyb9lGSMUjTpOukISp7oV9nrczgbfYz+TnDeoap3io3ayGXiWv+/3eQ9UKnmofwUlC4nh/H5jzBOO89lRItQ==
+
 vue-template-compiler@^2.7.14:
   version "2.7.15"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.7.15.tgz#ec88ba8ceafe0f17a528b89c57e01e02da92b0de"

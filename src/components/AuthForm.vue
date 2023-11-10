@@ -22,10 +22,7 @@
         id="email"
         type="email"
         :placeholder="emailPlaceholder"
-        :rules="[
-          validationRules.ruleRequired,
-          (v) => validationRules.ruleMinLength(v, 8),
-        ]"
+        :rules="[validationRules.ruleRequired, validationRules.ruleEmail]"
       />
       <FieldPassword
         v-model="credentials.password"
@@ -106,6 +103,7 @@ import FieldPassword from '@/components/fields/FieldPassword.vue'
 import { useRouter } from 'vue-router'
 import { useStore } from '@/stores/main'
 import validationRules from '@/utils/validations/rules'
+import { toast } from 'vue-sonner'
 
 const props = defineProps<{
   signUp: boolean
@@ -135,33 +133,32 @@ const formRef = ref()
 
 const emailLoading = ref(false)
 async function emailAuth() {
-  console.warn('emailAuth')
-
   const { valid } = await formRef.value.validate()
   if (valid) {
     emailLoading.value = true
     try {
       await login(credentials.value.email, credentials.value.password)
       router.push('/')
+      toast.success('Login success')
     } catch (error) {
-      alert(error.message)
+      toast.error(error.message)
     } finally {
       emailLoading.value = false
     }
   } else {
-    alert('Invalid form')
+    toast.error('Invalid form')
   }
 }
 
 const gitHubLoading = ref(false)
 async function gitHubAuth() {
   gitHubLoading.value = true
-  console.warn('gitHubAuth')
   try {
     await loginWithGithub()
     router.push('/')
+    toast.success('Login success')
   } catch (error) {
-    alert(error.message)
+    toast.error(error.message)
   } finally {
     gitHubLoading.value = false
   }
@@ -170,12 +167,12 @@ async function gitHubAuth() {
 const googleLoading = ref(false)
 async function googleAuth() {
   googleLoading.value = true
-  console.warn('googleAuth')
   try {
     await loginWithGoogle()
     router.push('/')
+    toast.success('Login success')
   } catch (error) {
-    alert(error.message)
+    toast.error(error.message)
   } finally {
     googleLoading.value = false
   }
@@ -184,12 +181,12 @@ async function googleAuth() {
 const twitterLoading = ref(false)
 async function twitterAuth() {
   twitterLoading.value = true
-  console.warn('twitterAuth')
   try {
     await loginWithTwitter()
     router.push('/')
+    toast.success('Login success')
   } catch (error) {
-    alert(error.message)
+    toast.error(error.message)
   } finally {
     twitterLoading.value = false
   }
@@ -198,13 +195,12 @@ async function twitterAuth() {
 const facebookLoading = ref(false)
 async function facebookAuth() {
   facebookLoading.value = true
-  console.warn('facebookAuth')
-  // TODO: facebookAuth
   try {
     await loginWithFacebook()
     router.push('/')
+    toast.success('Login success')
   } catch (error) {
-    alert(error.message)
+    toast.error(error.message)
   } finally {
     facebookLoading.value = false
   }

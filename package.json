@@ -15,7 +15,8 @@
     "vue": "^3.3.7",
     "vue-i18n": "^9.6.5",
     "vue-router": "^4.2.5",
-    "vue-simple-acl": "^2.0.2"
+    "vue-simple-acl": "^2.0.2",
+    "vue-sonner": "^1.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.4.0",

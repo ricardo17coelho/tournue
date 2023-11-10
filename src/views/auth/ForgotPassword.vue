@@ -37,6 +37,7 @@
 </template>
 <script lang="ts" setup>
 import { useStore } from '@/stores/main'
+import { toast } from 'vue-sonner'
 
 const { passwordReset } = useStore()
 
@@ -46,9 +47,9 @@ async function onSubmit() {
   loading.value = true
   try {
     await passwordReset(email.value)
-    alert('please follow the link in your email')
+    toast.error('please follow the link in your email')
   } catch (e) {
-    alert(e.message)
+    toast.error((e.message)
   } finally {
     loading.value = false
   }

@@ -35,6 +35,7 @@
 <script lang="ts" setup>
 import { useTheme } from 'vuetify'
 import { useStore } from '@/stores/main'
+import { toast } from 'vue-sonner'
 
 /* modelValue here refers to whether or not to show side nav drawer */
 defineProps<{
@@ -57,7 +58,7 @@ async function signOut() {
   try {
     await store.logout()
   } catch (error) {
-    alert(error.message)
+    toast.error(error.message)
   }
 }
 </script>

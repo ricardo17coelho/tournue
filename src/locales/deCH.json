@@ -1,1 +1,17 @@
-{}
+{
+  "validation.alpha_dash": "Das Feld {name} kann Buchstaben, Zahlen, Bindestriche oder Unterstriche enthalten",
+  "validation.alpha_num": "Das Feld {name} darf nur alphanumerische Zeichen enthalten.",
+  "validation.confirmed": "Dieses Feld muss identisch wie das Feld {name} sein",
+  "validation.contains_lowercase": "Das Feld muss min. {length} Kleinbuchstabe enthalten | Das Feld muss min. {length} Kleinbuchstaben enthalten",
+  "validation.contains_number": "Das Feld muss min. {length} Zahl enthalten | Das Feld muss min. {length} Zahlen enthalten",
+  "validation.contains_special": "Das Feld muss min. {length} Sonderzeiche enthalten | Das Feld muss min. {length} Sonderzeichen enthalten",
+  "validation.contains_uppercase": "Das Feld muss min. {length} Grossbuchstabe enthalten | Das Feld muss min. {length} Grossbuchstaben enthalten",
+  "validation.email": "Das Feld E-Mail muss eine gültige E-Mail sein.",
+  "validation.invalid": "Das Feld {name} ist ungültig",
+  "validation.length": "Der Text sollte die Zeichengrenze nicht überschreiten.",
+  "validation.max": "Das Feld darf nicht mehr als {length} Zeichen enthalten",
+  "validation.min": "Das Feld muss min. {length} Zeiche enthalten | Das Feld muss min. {length} Zeichen enthalten",
+  "validation.number": "Das Feld muss eine Nummer sein",
+  "validation.optional": "Optional",
+  "validation.required": "Pflichtfeld"
+}

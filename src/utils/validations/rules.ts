@@ -55,7 +55,7 @@ export default {
    * @returns validate
    */
   ruleNumber: (v: number) => {
-    return Number.isInteger(Number(v)) || `The field must be a valid integer`
+    return Number.isInteger(Number(v)) || i18n.global.t('validation.number')
   },
   /**
    * Rule validate contains uppercase

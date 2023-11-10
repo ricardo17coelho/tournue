@@ -1,1 +1,17 @@
-{}
+{
+  "validation.alpha_dash": "{name} field may contain alphabetic characters, numbers, dashes or underscores",
+  "validation.alpha_num": "{name} field may only contain alpha-numeric characters",
+  "validation.confirmed": "This field must be identical to the {name} field",
+  "validation.contains_lowercase": "Field should contains at least {length} lowercase character | It should contains at least {length} lowercase characters",
+  "validation.contains_number": "Field should contains at least {length} number | It should contains at least {length} number",
+  "validation.contains_special": "Field should contains at least {length} special character | It should contains at least {length} special characters",
+  "validation.contains_uppercase": "Field should contains at least {length} uppercase character | It should contains at least {length} uppercase characters",
+  "validation.email": "Email field must be a valid email.",
+  "validation.invalid": "{name} field is invalid",
+  "validation.length": "The text should not exceed characters limit.",
+  "validation.max": "The field cannot contain more than {length} characters",
+  "validation.min": "The field must contain more than {length} character | The field must contain more than {length} characters",
+  "validation.number": "The field must be a valid integer",
+  "validation.optional": "Optional",
+  "validation.required": "Field required"
+}

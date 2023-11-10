@@ -13,6 +13,7 @@ import { computed } from 'vue'
 import { RouteLocationRaw } from 'vue-router'
 import { useAcl } from 'vue-simple-acl'
 import { isDevEnv } from '@/utils'
+import { toast } from 'vue-sonner'
 import CoreNavDrawer from '@/components/core/CoreNavDrawer.vue'
 
 defineProps<{
@@ -101,6 +102,6 @@ const navLinks = computed((): NavLinkItem[] => [
 
 // async function signOut() {
 //   const { error } = await supabase().auth.signOut();
-//   if (error) alert(error.message);
+//   if (error) toast.error(error.message);
 // }
 </script>

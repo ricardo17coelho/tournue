@@ -23,6 +23,7 @@
 <script lang="ts" setup>
 import { useAuthStore } from "@/stores/auth";
 import FieldPassword from "@/components/fields/FieldPassword.vue";
+import { toast } from 'vue-sonner'
 const router = useRouter();
 const route = useRoute();
 
@@ -51,9 +52,9 @@ async function onSubmit() {
   console.log(error, data);
 
   if (error) {
-    alert(error.message);
+    toast.error((error.message);
   } else {
-    alert("successfully reset password.");
+    toast.success(("successfully reset password.");
     router.push("/");
   }
   loading.value = false;
