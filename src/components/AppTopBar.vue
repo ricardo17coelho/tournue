@@ -34,7 +34,7 @@
 
 <script lang="ts" setup>
 import { useTheme } from 'vuetify'
-import { useStore } from '@/stores/main'
+import { useAuthStore } from '@/stores/auth'
 import { toast } from 'vue-sonner'
 
 /* modelValue here refers to whether or not to show side nav drawer */
@@ -48,7 +48,7 @@ const emit = defineEmits<{
 
 /** Vuetify Theme */
 const theme = useTheme()
-const store = useStore()
+const authStore = useAuthStore()
 
 function toggleTheme() {
   theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
@@ -56,7 +56,8 @@ function toggleTheme() {
 
 async function signOut() {
   try {
-    await store.logout()
+    await authStore.logout()
+    toast.success('Logout success')
   } catch (error) {
     toast.error(error.message)
   }

@@ -4,11 +4,11 @@ import router from '@/router'
 import { createAcl, defineAclRules } from 'vue-simple-acl'
 import { USER_ROLES } from '@/constants/roles'
 import { computed } from 'vue'
-import { useStore } from '@/stores/main'
+import { useAuthStore } from '@/stores/auth'
 
-const store = useStore()
+const authStore = useAuthStore()
 
-const user = computed(() => store.user)
+const user = computed(() => authStore.user)
 
 console.warn('user', user)
 

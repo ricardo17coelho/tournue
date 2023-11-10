@@ -101,7 +101,7 @@
 import { ref, computed } from 'vue'
 import FieldPassword from '@/components/fields/FieldPassword.vue'
 import { useRouter } from 'vue-router'
-import { useStore } from '@/stores/main'
+import { useAuthStore } from '@/stores/auth'
 import validationRules from '@/utils/validations/rules'
 import { toast } from 'vue-sonner'
 
@@ -127,7 +127,7 @@ const {
   loginWithGoogle,
   loginWithTwitter,
   login,
-} = useStore()
+} = useAuthStore()
 
 const formRef = ref()
 

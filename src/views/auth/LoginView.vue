@@ -20,10 +20,10 @@
 
 <script setup lang="ts">
 import { reactive, watch } from 'vue'
-import { useStore } from '@/stores/main'
+import { useAuthStore } from '@/stores/auth'
 import { useRouter } from 'vue-router'
 
-const store = useStore()
+const authStore = useAuthStore()
 const router = useRouter()
 
 const user = reactive({
@@ -32,7 +32,7 @@ const user = reactive({
 })
 
 watch(
-  () => store.isAuthenticated,
+  () => authStore.isAuthenticated,
   (user) => {
     if (user) {
       router.push({ name: 'home' })
@@ -42,7 +42,7 @@ watch(
 
 const login = async () => {
   if (user.email && user.password) {
-    await store.login(user.email, user.password)
+    await authStore.login(user.email, user.password)
   }
 }
 </script>

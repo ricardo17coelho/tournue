@@ -17,7 +17,7 @@ import {
 } from 'firebase/auth'
 import type { User, UserProfile } from 'firebase/auth'
 
-export const useStore = defineStore('main', () => {
+export const useAuthStore = defineStore('main', () => {
   const user = ref<User | null>(null)
 
   const isAuthenticated = computed(() => !!user.value)

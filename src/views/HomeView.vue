@@ -1,20 +1,20 @@
 <template>
   <div>
     <h2>Home</h2>
-    <p>Welcome {{ store.user?.email }}</p>
-    <button class="form-button" @click="store.logout">Logout</button>
+    <p>Welcome {{ authStore.user?.email }}</p>
+    <button class="form-button" @click="authStore.logout">Logout</button>
   </div>
 </template>
 <script setup lang="ts">
-import { useStore } from '@/stores/main'
+import { useAuthStore } from '@/stores/auth'
 import { watch } from 'vue'
 import { useRouter } from 'vue-router'
 
-const store = useStore()
+const authStore = useAuthStore()
 const router = useRouter()
 
 watch(
-  () => store.user,
+  () => authStore.user,
   (user) => {
     if (!user) {
       router.push({ name: 'signin' })

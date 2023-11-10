@@ -36,10 +36,10 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { useStore } from '@/stores/main'
+import { useAuthStore } from '@/stores/auth'
 import { toast } from 'vue-sonner'
 
-const { passwordReset } = useStore()
+const { passwordReset } = useAuthStore()
 
 const email = ref('')
 const loading = ref(false)

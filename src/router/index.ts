@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/auth/LoginView.vue'
-import { useStore } from '@/stores/main'
+import { useAuthStore } from '@/stores/auth'
 
 import LayoutAuth from '@/layouts/LayoutAuth.vue'
 import LayoutDefault from '@/layouts/LayoutDefault.vue'
@@ -62,7 +62,7 @@ const router = createRouter({
 router.beforeEach(async (to) => {
   const { requiresNoAuth } = to.meta
   console.warn('requiresNoAuth', requiresNoAuth)
-  const { isAuthenticated, getCurrentUser } = useStore()
+  const { isAuthenticated, getCurrentUser } = useAuthStore()
   console.warn('isAuthenticated', isAuthenticated)
   const user = await getCurrentUser()
   console.warn('user', user)

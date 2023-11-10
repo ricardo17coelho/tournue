@@ -3,10 +3,10 @@
 </template>
 <script lang="ts" setup>
 import LoadingIcon from '@/components/LoadingIcon.vue'
-import { useStore } from '@/stores/main'
+import { useAuthStore } from '@/stores/auth'
 
 const router = useRouter()
-const { isAuthenticated } = useStore()
+const { isAuthenticated } = useAuthStore()
 
 onMounted(() => {
   if (isAuthenticated) {

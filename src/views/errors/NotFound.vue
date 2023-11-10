@@ -5,9 +5,9 @@
   </VBtnPrimary>
 </template>
 <script lang="ts" setup>
-import { useStore } from '@/stores/main'
+import { useAuthStore } from '@/stores/auth'
 
-const { isAuthenticated } = useStore()
+const { isAuthenticated } = useAuthStore()
 
 const reRoute = computed(() => {
   if (isAuthenticated)
